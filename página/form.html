@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html long="pt-br">
+    <head>
+        <tittle>Aprendendo formulario</tittle>
+        <link href="css/form.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <form method="POST/GET" action="">
+            <h2>Usando o formulario</h2>
+            <div>
+                <fieldset>
+                    <legend>Conta:</legend>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" name="email" minlength="6" required />
+                    </div>
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" name="senha" required />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados</legend>
+                    <div>
+                        <label>Nome:</label>
+                        <input type="text" name="name" placeholder="Ex: Bruno" required autocomplete="on" />
+                    </div>
+                </fieldset>
+            </div>
+            <input type="submit" value="Enviar..." />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vida Sustentável</title>
+        <meta name="keywords" content="web, curso web, css, html, comida, comida rápida">
+        <meta name="description" content="aprenda a fazer uma comida deliciosa em 5 minutos ">
+        <meta name="author" content="Yasmin Aquino">
+        <meta name="viewport" content="width=device-width;initial-scale=1.0;maximum-scale=1.0">
+        <meta charset="utf-8">
+        <!-- comentário -->
+        <link href="imagens/logoB.png" rel="icon">
+        <link href="imagens/logoB.png" rel="apple-touch-icon">
+
+        <link rel="stylesheet" type="text/css" href="css/contato.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <!-- menu --> 
+            <div class="container">
+                <div class="logo">
+                    <!--<h2>Best Planes</h2>-->
+                    <img src="imagens/logoB.png">
+                </div>
+                <nav class="menu-desktop">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="vidasustentavel.html">Vida Sustentável</a></li>
+                        <li><a href="doacoes.html">Doações</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <!-- Menu Mobile -->
+                
+
+        <!-- formulário -->
+        <div class="contato">
+            <section>
+                <h2>Contato</h2>
+                 <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                    <label>Mensagem</label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+    
+                    <input type="hidden" name="accessKey" value="db8b3cfe-eac4-4a61-a92d-010c6973d1b9">
+                    <input type="hidden" name="redirectTo" value=""> <!--colocar aqui dps o link do localhost com "/obrigado"-->
+                </form>
+            </section>
+        </div>
+
+        <footer class="footer1">
+            <div class="container">
+                <div class="w33">
+                    <h2>Localização</h2>
+                    <p>
+                        <img src="imagens/outline2.png">
+                        Rua Testes, 100
+                    </p>
+                    <p>
+                        <img src="imagens/outline3.png">
+                        (12)3885-5555
+                    </p>
+                </div>
+                <div class="w33">
+                    <h2>Links Uteis</h2>
+                    <a href="ifspcaraguatatuba.edu.br">
+                        IFSP - Caraguatatuba 
+                    </a>
+                    <a href="www.google.com.br">
+                        Google
+                    </a>
+                </div>
+                <div class="w33">
+                    <h2>Conecte-se conosco</h2>
+                    <div class="group-icons">
+                        <a href="#">
+                             <img src="imagens/outline4.png">
+                             facebook
+                        </a>
+                        <a href="#">
+                            <img src="imagens/outline5.png">
+                             school
+                        </a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+        <footer class="footer2">
+            <div class="container">
+                <p>
+                    &copy;
+                    Yasmin Aquino - Todos os direitos reservados</p>
+            </div>
+        </footer>
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script>
+            $('nav.menu-mobile h2').click(function(){
+                $('nav.manu-mobile ul').slideToggle();
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,573 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+.container{
+    max-width: 1280;
+    margin: 0 auto;
+}
+
+header{
+    padding: 8px 0;
+}
+
+.logo{
+    float: left;
+}
+
+nav.menu-desktop {
+    float: right;
+}
+
+nav.menu-desktop ul{
+    position: relative;
+    top: 15px; 
+}
+
+nav.menu-desktop li{
+    padding: 0 10px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+nav.menu-desktop a{
+    text-decoration: none;
+    color:black
+}
+
+nav.menu-desktop li.selected{
+    font-weight: bold;
+}
+
+nav.menu-desktop a:hover{
+    text-decoration: underline;
+}
+
+.logo h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+
+.logo img{
+    height: 60px;
+}
+
+/*
+Banner
+*/
+.main-bg{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding: 150px 0;
+    background: url("../img/banner01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.main-bg h2{
+    color: #92a649;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.main-bg p{
+    text-align: left;
+    color: white;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.overlay{
+    z-index: 1;
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.main-bg > .container{
+    position: relative;
+    z-index: 2;
+}
+
+/*
+botoes
+*/
+
+.button{
+    width: 200px;
+    text-align: center;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 50px;
+    transition-duration: 0.4s;
+}
+
+.button1{
+    background-color: #92a649;
+    border: 2px solid #60731a;
+    color: white;
+}
+.button1:hover{
+    color: #60731a;
+    font-weight: 700;
+    background-color: white;
+}
+
+/*
+Botão plantas
+*/
+
+.botaoplanta{
+    text-align: center;
+}
+
+.button.button2{
+    margin-top: -10px;
+}
+
+/*
+Botão equipe
+*/
+.button.button2{
+    margin-top: 0px;
+}
+
+
+/*
+diferenciais
+*/
+section.diferenciais{
+    padding: 30px 0;
+    text-align: center;
+    height: 300px;
+}
+
+.line-text{
+    position: relative;
+    display: inline-block;
+}
+
+.line-text div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 73px;
+    height: 3px;
+    background: #92a649;
+}
+
+.line-text h2{
+    font-weight: normal;
+    font-size: 27px;
+    color: #92a649;
+}
+
+.icones-diferenciais{
+    margin-top: 25px;
+}
+
+.box-ícone-single{
+    float: left;
+    height: 30%;
+    width: 33.3%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.box-ícone-single h2{
+    font-size: 40px;
+    color: #8A6B62
+}
+
+.box-ícone-single h2 span{
+    font-size: 70px;
+}
+
+.box-ícone-single p{
+    font-weight: lighter;
+    font-size: 16px;
+    color: #646464
+}
+
+.button{
+    width: 200px;
+    text-align: center;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 50px;
+    transition-duration: 0.4s;
+}
+
+.button1{
+    background-color: #92a649;
+    border: 2px solid #60731a;
+    color: white;
+}
+
+/*
+Equipe
+*/
+
+section.sobre-equipe{
+    padding: 30px 0;
+    background: rgb(225, 225, 225);
+}
+
+section.sobre-equipe > .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equipe-container{
+    width: 50%;
+}
+
+.sobre-container{
+    width: 50%;
+}
+
+.sobre-container p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: black;
+}
+
+
+.avatar-box{
+    margin-top: 15px;
+}
+
+.img-avatar{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    background-color: gray
+}
+
+.descricao-avatar{
+    padding: 0 10px;
+    width: oocal(100% - 90px);
+    display: inline-block;
+}
+
+.descricao-avatar h3{
+    font-weight: normal;
+    font-style: italic;
+    color: #303030
+}
+
+.descricao-avatar p{
+    font-weight: lighter;
+    color: #303030
+}
+
+section.inscricao{
+    background-color: #92a649;
+    padding: 10px 0;
+
+}
+
+h2.inscricao-texto{
+    font-weight: normal;
+    color: white;
+}
+
+.inscricao-forn input[type=email]{
+    width: calc(100%-125px);
+    height: 40px;
+    background: white;
+    border: 1px solid #CCC;
+    display: inline-block;
+}
+
+.inscricao-forn input[type=submit]{
+    width: 120px;
+    height: 40px;
+    background: #60731a;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.w50{
+    width: 50%;
+    float: left;
+}
+
+.center{
+    text-align: center;
+}
+
+/*
+Cards
+*/
+
+section.cards{
+    padding: 30px 0;
+}
+
+.card-single{
+    float: left;
+    padding: 50px;
+    width: 33.3%
+}
+
+.card-single img{
+    width:100%;
+}
+
+.card-single h3{
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 19px;
+}
+
+.card-single p{
+    margin: 10px 0;
+    font-weight: lighter;
+    font-size: 16px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #CCC;
+}
+
+/*
+Footer
+*/
+
+.w33{
+    float: left;
+    width:33.3%
+}
+
+.w32{
+    text-align: right;
+}
+
+.logotipo img{
+    float: left;
+    height: 100px;
+}
+
+footer.footer1{
+    padding: 20px 0;
+    background: black;
+    color: white;
+}
+
+footer.footer1 h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+
+footer.footer1 p{
+    margin-top: 8px;
+    font-weight: lighter;
+}
+
+footer.footer1 a{
+    display: block;
+    color:white;
+}
+
+.group-icons a{
+    font-size: 18px;
+    display: inline-block;
+    margin: 15px 10px;
+}
+
+footer.footer2{
+    padding: 15px 0;
+    background: black;
+    text-align: center;
+    color: white;
+}
+
+/*
+Menu Mobile
+*/
+nav.menu-mobile{
+    display: none;
+    float: right;
+}
+
+nav.manu-mobile h2{
+    cursor: pointer;
+}
+
+nav.menu-mobile ul{
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    z-index: 999;
+    text-align: center;
+}
+
+nav.menu-mobile li{
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+}
+
+nav.menu-mobile li.selected{
+    background-color: rgb(225, 225, 225);
+}
+
+nav.menu-mobile a{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+/*
+Página Sobre
+*/
+.tittle-page{
+    padding: 70px;
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../img/pexels-mali-maeder-142497.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.tittle-page h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+/*
+Noticias
+*/
+.sobre-noticias{
+    padding: 30px 0;
+}
+
+.sobre-noticia-single img{
+    float: left;
+    max-width: 100%;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.sobre-noticia-single p{
+    font-size: 16px;
+    padding: 15px 15px;
+    float: left;
+    width: 50%;
+    text-align: justify;
+}
+
+.paragrafo-noticia-single p{
+    margin-top: 15px;
+}
+
+.button2{
+    background-color: #92a649;
+    border: 2px solid #60731a;
+    color: white;
+    margin-top: 150px;
+}
+.button2:hover{
+    background-color: white;
+    border: 2px solid #60731a;
+    color: #60731a;
+    font-weight: 700;
+}
+
+.paralax{
+    padding: 30px 0;
+    width: 100%;
+    min-height: 400px;
+    background-image: url("../img/pexels-felix-mittermeier-957024_\(10\).jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/*
+Equipe página sobre
+*/
+.equipe{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.equipe-circles{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equipe-circle-single{
+    width: 33.3%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.equipe-circle-single h3{
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.avatar{
+    position: relative;
+    width: 60%;
+    padding-top: 60%;
+    margin: 0 auto;
+}
+
+.avatar2-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 500px ){
+    nav.menu-desktop{
+        display: none;
+    }
+
+    nav.menu-mobile{
+        display: block;
+    }
+}
+
