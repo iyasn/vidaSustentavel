@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sustentável</title>
+
+    <link href="imagens/logoB.png" rel="icon">
+    <link href="imagens/logoB.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="criar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@00&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+</style>
+<script>
+  function verificarIdade() {
+    var dataNascimento = document.getElementById('data-nascimento').value;
+    var dataAtual = new Date();
+    var anoAtual = dataAtual.getFullYear();
+    var mesAtual = dataAtual.getMonth() + 1; // Os meses são indexados a partir de zero
+    var diaAtual = dataAtual.getDate();
+
+    var partesData = dataNascimento.split('-');
+    var anoNascimento = parseInt(partesData[0]);
+    var mesNascimento = parseInt(partesData[1]);
+    var diaNascimento = parseInt(partesData[2]);
+
+    var idade = anoAtual - anoNascimento;
+
+    // Verificar se já fez aniversário este ano
+    if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+      idade--;
+    }
+
+    if (idade < 18) {
+      document.getElementById('idade-error').textContent = 'Você deve ter pelo menos 18 anos para criar uma conta.';
+      return false;
+    }
+
+    return true;
+  }
+</script>
+    <main><h1>Criar Conta</h1>
+        <a href="usuario2.html" class="close-button">X</a>
+        <form action="processar_formulario.php" method="POST" onsubmit="return verificarIdade()">
+          <label for="nome"><P>Nome:</P></label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="sobrenome"><P>Sobrenome:</P></label>
+          <input type="text" id="sobrenome" name="sobrenome">
+
+          <label for="email"><P>E-mail:</P></label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="senha"><P>Senha:</P></label>
+          <input type="password" id="senha" name="senha" required>
+
+          <label for="data-nascimento"><P>Data de Nascimento:</P></label>
+          <input type="date" id="data-nascimento" name="data-nascimento" required>
+          <span id="idade-error" class="error-message"></span>
+
+          <label for="genero"><P>Gênero:</P></label>
+          <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+
+          <input type="submit" value="Criar Conta">
+          <p id="success-message" class="success-message" style="display: none;">Conta criada com sucesso!</p>
+        </form>
+
+        <script>
+            var form = document.querySelector('form');
+            var successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var isValid = verificarIdade();
+                if (isValid) {
+                    successMessage.style.display = 'block';
+                    form.reset();
+
+                    setTimeout(function() {
+                        window.location.href = "usuario2.html";
+                    }, 7000); // 10 segundos (10000 milissegundos)
+                }
+            });
+        </script>
+</body>
+</html>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sustentável</title>
+
+    <link href="imagens/logoB.png" rel="icon">
+    <link href="imagens/logoB.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="usuario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@00&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <img src="imagens/logoB-.png" alt="">
+        <div class="x"><a href="">X</a></div>
+        <h1>Iniciar sessão</h1>
+        <div class="email">
+          <form action="processar_formulario.php" method="POST">
+              <label for="email"><p>Email:</p></label>
+              <div class="input-container">
+                  <input type="email" id="email" name="email" placeholder="" required>
+                  <span id="email-error" class="error-message"></span>
+
+                <label for="senha"><p>Senha:</p></label>
+                <input style="margin: 0px;" type="password" id="senha" name="senha" placeholder="" required>
+                <span id="senha-error" class="error-message"></span><br><br>
+                <a href="senha.html">Esqueceu sua senha?</a>
+            </div>
+          </div>
+
+        </form>
+        <input type="submit" value="Enviar" class="link-button" onclick="validateForm(event)">
+
+<script>
+            function validateForm(event) {
+                event.preventDefault(); // Evita que o formulário seja enviado automaticamente
+
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('senha').value;
+
+                // Expressão regular para verificar o formato do email
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                // Remove as mensagens de erro anteriores
+                document.getElementById('email-error').textContent = '';
+                document.getElementById('senha-error').textContent = '';
+
+                // Verifica se o email e a senha estão preenchidos e têm formatos válidos
+                if (!email) {
+                    document.getElementById('email-error').textContent = 'Por favor, preencha o email.';
+                } else if (!emailRegex.test(email)) {
+                    document.getElementById('email-error').textContent = 'Por favor, insira um email';
+                  }
+                  if (!password) {
+                document.getElementById('senha-error').textContent = 'Por favor, preencha a senha.';
+            }
+
+            if (email && emailRegex.test(email) && password) {
+                redirectToPreviousPage();
+            }
+        }
+
+        function redirectToPreviousPage() {
+            var previousPage = document.referrer;
+            if (previousPage) {
+                window.location.href = previousPage;
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+        document.querySelector('.x a').addEventListener('click', function(event) {
+  event.preventDefault();
+  var previousPage = document.referrer;
+  if (previousPage) {
+    window.location.href = previousPage;
+  } else {
+    window.location.href = "doacoes.html"; // Página padrão caso não haja uma página anterior
+  }
+});
+    </script>
+
+    <div class="criar"><a href="criar.html">Criar conta</a></div>
+</main>

@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+.container{
+    max-width: 1280;
+    margin: 0 auto;
+}
+
+header{
+    padding: 10px 0;
+}
+
+.logo{
+    float: left;
+}
+
+nav.menu-desktop {
+    float: right;
+}
+
+nav.menu-desktop ul{
+    position: relative;
+    top: 15px; 
+}
+
+nav.menu-desktop li{
+    padding: 0 10px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+nav.menu-desktop a{
+    text-decoration: none;
+    color:black
+}
+
+nav.menu-desktop li.selected{
+    font-weight: bold;
+}
+
+nav.menu-desktop a:hover{
+    text-decoration: underline;
+}
+
+.logo h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+
+.logo img{
+    height: 60px;
+}
+
+/*
+segundo menu
+*/
+
+.menu-blog {
+    text-align: center;
+    margin-top: 5%;
+    height: 50px;
+    background-color: #8bc98b;
+    position: relative;
+}
+
+.menu-blog li{
+    padding: 0 10px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+.menu-blog a{
+    text-decoration: none;
+    color: #38383b;
+}
+
+.menu-blog li.selected{
+    font-weight: bold;
+}
+
+.menu-blog a:hover{
+    text-decoration: underline;
+}
+
+.menu-blog ul{
+    position: relative;
+    top: 14px; 
+}
+
+/*
+botão de nova postagem
+*/
+.button{
+    width: 200px;
+    border: none;
+    padding: 3px 8px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+.button1{
+    background-color: #ffffff;
+    border: 2px solid #78b482;
+    color: #6ba775;
+}
+.button1:hover{
+    color: #6ba775;
+    font-weight: 700;
+    background-color: white;
+}
+
+/*
+Banner
+*/
+.main-bg{
+    width: 100%;
+    height: 800px;
+    padding: 150px 0;
+    background: url("../img/banner01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.main-bg h2{
+    color: #92a649;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.main-bg p{
+    text-align: left;
+    color: white;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+/*
+Footer
+*/
+
+.w33{
+    float: left;
+    width:33.3%
+}
+
+.w32{
+    text-align: right;
+}
+
+.logotipo img{
+    float: left;
+    height: 100px;
+}
+
+footer.footer1{
+    padding: 20px 0;
+    background: black;
+    color: white;
+}
+
+footer.footer1 h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+
+footer.footer1 p{
+    margin-top: 8px;
+    font-weight: lighter;
+}
+
+footer.footer1 a{
+    display: block;
+    color:white;
+}
+
+.group-icons a{
+    font-size: 18px;
+    display: inline-block;
+    margin: 15px 10px;
+}
+
+footer.footer2{
+    padding: 15px 0;
+    background: black;
+    text-align: center;
+    color: white;
+}
+
+
+@media screen and (max-width: 500px ){
+    nav.menu-desktop{
+        display: none;
+    }
+
+    nav.menu-mobile{
+        display: block;
+    }
+}
+
+
+
+
+
+

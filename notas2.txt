@@ -1,0 +1,55 @@
+PÁGINA INDEX, COMEÇO
+<section class="main-bg">
+            <div class="overlay"></div>
+            <div class="container">
+            <h2>Vida Sustentável</h2>
+            <p>
+                Ter uma vida sustentável significa adotar um estilo de vida que busca equilibrar as necessidades humanas com a preservação dos recursos naturais e a proteção do meio ambiente.
+            </p>
+            <p>
+                Uma vida sustentável busca minimizar o impacto negativo no planeta, promovendo assim a harmonia entre o ser humano e a natureza, visando um futuro mais saudável e equilibrado para as próximas gerações.            </p>
+            <a href="vidasustentavel.html" class="button button1">SAIBA MAIS</a>
+            </div>
+        </section>
+
+PÁGINA SOBRE 
+<div class="paragrafo-noticia-single">
+                    <div class="overlay1">
+                    </div>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        
+                </div>
+
+INDEX.EJS
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
+
+CONTATO
+                        <form action="https://api.staticforms.xyz/submit" method="post">
+
+DOAÇÕES
+
+            <span class="d-block mb-3 text-uppercase">Editor Staff</span>

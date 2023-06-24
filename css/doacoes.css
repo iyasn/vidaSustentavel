@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+.container{
+    max-width: 1280;
+    margin: 0 auto;
+}
+
+header{
+    padding: 10px 0;
+}
+
+.logo{
+    float: left;
+}
+
+nav.menu-desktop {
+    float: right;
+}
+
+nav.menu-desktop ul{
+    position: relative;
+    top: 15px; 
+}
+
+nav.menu-desktop li{
+    padding: 0 10px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+nav.menu-desktop a{
+    text-decoration: none;
+    color:black
+}
+
+nav.menu-desktop li.selected{
+    font-weight: bold;
+}
+
+nav.menu-desktop a:hover{
+    text-decoration: underline;
+}
+
+.logo h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+
+.logo img{
+    height: 60px;
+}
+
+/*
+Doações
+*/
+
+
+section.ongs{
+    padding: 80px 0;
+    text-align: center;
+    height: 400px;
+}
+
+
+.ongscadastradas div{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 73px;
+    height: 3px;
+    background: #92a649;
+}
+
+.ongscadastradas h2{
+    font-weight: normal;
+    font-size: 27px;
+    color: #92a649;
+}

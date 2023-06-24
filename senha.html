@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sustentável</title>
+
+    <link href="imagens/logoB.png" rel="icon">
+    <link href="imagens/logoB.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="senha.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@00&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <main>
+        <h1>Redefinir Senha</h1>
+        <h2>Por favor, digite seu e-mail para receber um código de redefinição de senha:</h2>
+        <a href="usuario2.html" class="close-button">X</a>
+        <form action="processar_formulario.php" method="POST" id="form">
+            <label for="email"><P style="margin: 10px 0px;">E-mail:</P></label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+        <div id="message" class="message"></div>
+
+        <script>
+            document.getElementById("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita o envio do formulário
+
+                // Simulação do envio do formulário (substitua pelo código necessário para enviar o formulário)
+                var email = document.getElementById("email").value;
+                if (email) {
+                    // Exibe a mensagem de verificação de e-mail
+                    document.getElementById("message").textContent = "Verifique seu e-mail para redefinir sua senha.";
+                    document.getElementById("message").style.display = "block";
+                }
+            });
+        </script>
+    </main>
+</body>
+</html>
