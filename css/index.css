@@ -15,7 +15,7 @@
 }
 
 header{
-    padding: 10px 10px;
+    padding: 10px 0px;
 }
 
 .logo{
@@ -60,6 +60,42 @@ nav.menu-desktop a:hover{
 }
 
 /*
+segundo menu
+*/
+
+.menu-blog {
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background-color: #8bc98b;
+    position: relative;
+}
+
+.menu-blog li{
+    padding: 0 10px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+.menu-blog a{
+    text-decoration: none;
+    color: #38383b;
+}
+
+.menu-blog li.selected{
+    font-weight: bold;
+}
+
+.menu-blog a:hover{
+    text-decoration: underline;
+}
+
+.menu-blog ul{
+    position: relative;
+    top: 14px; 
+}
+
+/*
 Banner
 */
 .main-bg{
@@ -72,6 +108,7 @@ Banner
     background-size: cover;
     background-position: center;
     text-align: center;
+    margin-top: -10px;
 }
 
 .main-bg h2{
