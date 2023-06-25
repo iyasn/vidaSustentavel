@@ -10,7 +10,12 @@ var doacoesRouter = require('./routes/doacoes');
 var sobreRouter = require('./routes/sobre');
 var contatoRouter = require('./routes/contato');
 var usuarioRouter = require('./routes/usuario');
-var usersRouter = require('./routes/users');
+var formularioongRouter = require('./routes/formularioong');
+var formulariousuarioRouter = require('./routes/formulariousuario');
+var criarRouter = require('./routes/criar');
+var post1Router = require('./routes/post1');
+var senhaRouter = require('./routes/users');
+var usersRouter = require('./routes/senha');
 
 
 var app = express();
@@ -31,6 +36,11 @@ app.use('/doacoes', doacoesRouter);
 app.use('/sobre', sobreRouter);
 app.use('/contato', contatoRouter);
 app.use('/usuario', usuarioRouter);
+app.use('/formulariousuario', formulariousuarioRouter);
+app.use('/formularioong', formularioongRouter);
+app.use('/criar', criarRouter);
+app.use('/post1', post1Router);
+app.use('/senha', senhaRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

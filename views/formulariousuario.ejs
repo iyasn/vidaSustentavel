@@ -8,10 +8,10 @@
         <meta name="viewport" content="width=device-width;initial-scale=1.0;maximum-scale=1.0">
         <meta charset="utf-8">
         <!-- comentário -->
-        <link href="imagens/logoB-.png" rel="icon">
-        <link href="imagens/logoB-.png" rel="apple-touch-icon">
+        <link href="images/logoB-.png" rel="icon">
+        <link href="images/logoB-.png" rel="apple-touch-icon">
 
-        <link rel="stylesheet" type="text/css" href="css/contato2.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/contato2.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="logo">
                     <!--<h2>Best Planes</h2>-->
-                    <img src="imagens/logoB.png">
+                    <img src="images/logoB.png">
                 </div>
                 <nav class="menu-desktop">
                     <ul>
@@ -93,7 +93,7 @@
         </head>
         <body>
           <div class="formulario">
-            <img class="logoformulario" src="imagens/logoB-.png" alt="Logo">
+            <img class="logoformulario" src="images/logoB-.png" alt="Logo">
         
             <form>
               <div class="form-group">
@@ -102,13 +102,60 @@
               </div>
         
               <div class="form-group">
-                <label for="mensagem">Descrição:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
               </div>
         
               <div class="form-group">
-                <label for="imagem">Logo:</label>
-                <input type="file" id="imagem" name="imagem" accept="image/*">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="documento">CPF ou CNPJ:</label>
+                <input type="text" id="documento" name="documento" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="valor">Valor a ser pago:</label>
+                <input type="text" id="valor" name="valor" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="forma-pagamento">Forma de Pagamento:</label>
+                <select id="forma-pagamento" name="forma-pagamento" required>
+                  <option value="boleto">Boleto</option>
+                  <option value="pix">PIX</option>
+                  <option value="cartao">Cartão</option>
+                </select>
+              </div>
+        
+              <div id="cartao-group" class="form-group" style="display: none;">
+                <label for="banco">Banco:</label>
+                <input type="text" id="banco" name="banco">
+              </div>
+        
+              <div id="cartao-info" class="form-group" style="display: none;">
+                <label for="agencia">Agência:</label>
+                <input type="text" id="agencia" name="agencia">
+        
+                <label for="conta">Conta:</label>
+                <input type="text" id="conta" name="conta">
+              </div>
+        
+              <div id="pix-group" class="form-group" style="display: none;">
+                <button class="pix-button" type="button">Nosso PIX: 12345654321</button>
+              </div>
+        
+              <div id="boleto-group" class="form-group" style="display: none;">
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua">
+        
+                <label for="numero">Número da Casa:</label>
+                <input type="text" id="numero" name="numero">
+        
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
               </div>
         
               <div class="form-group">
@@ -116,21 +163,48 @@
               </div>
             </form>
           </div>
+        
+          <script>
+            var formaPagamentoSelect = document.getElementById("forma-pagamento");
+            var cartaoGroup = document.getElementById("cartao-group");
+            var cartaoInfo = document.getElementById("cartao-info");
+            var pixGroup = document.getElementById("pix-group");
+            var boletoGroup = document.getElementById("boleto-group");
+        
+            formaPagamentoSelect.addEventListener("change", function() {
+              if (formaPagamentoSelect.value === "cartao") {
+                cartaoGroup.style.display = "block";
+                cartaoInfo.style.display = "block";
+                pixGroup.style.display = "none";
+                boletoGroup.style.display = "none";
+              } else if (formaPagamentoSelect.value === "pix") {
+                cartaoGroup.style.display = "none";
+                cartaoInfo.style.display = "none";
+                pixGroup.style.display = "block";
+                boletoGroup.style.display = "none";
+              } else if (formaPagamentoSelect.value === "boleto") {
+                cartaoGroup.style.display = "none";
+                cartaoInfo.style.display = "none";
+                pixGroup.style.display = "none";
+                boletoGroup.style.display = "block";
+              }
+            });
+          </script>
 
 
     <footer class="footer1">
         <div class="logotipo">
-            <img src="imagens/logo.png">
+            <img src="images/logo.png">
         </div>
         <div class="container">
             <div class="w33">
                 <h2>Localização</h2>
                 <p>
-                    <img src="imagens/outline_room_white.png">
+                    <img src="images/outline_room_white.png">
                     Rua Testes, 100
                 </p>
                 <p>
-                    <img src="imagens/outline_room_white.png">
+                    <img src="images/outline_room_white.png">
                     (12)3885-5555
                 </p>
             </div>
@@ -147,11 +221,11 @@
                 <h2>Conecte-se conosco</h2>
                 <div class="group-icons">
                     <a href="#">
-                         <img src="imagens/outline_view_white.png">
+                         <img src="images/outline_view_white.png">
                          facebook
                     </a>
                     <a href="#">
-                        <img src="imagens/outline_school_white.png">
+                        <img src="images/outline_school_white.png">
                          school
                     </a>
                 </div>
