@@ -36,11 +36,11 @@ app.use('/doacoes', doacoesRouter);
 app.use('/sobre', sobreRouter);
 app.use('/contato', contatoRouter);
 app.use('/usuario', usuarioRouter);
-app.use('/doacoes/formulariousuario', formulariousuarioRouter);
-app.use('/doacoes/formularioong', formularioongRouter);
-app.use('/usuario/criar', criarRouter);
-app.use('/blog/post1', post1Router);
-app.use('/usuario/senha', senhaRouter);
+app.use('/formulariousuario', formulariousuarioRouter);
+app.use('/formularioong', formularioongRouter);
+app.use('/criar', criarRouter);
+app.use('/post1', post1Router);
+app.use('/senha', senhaRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

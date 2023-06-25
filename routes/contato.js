@@ -32,27 +32,27 @@ router.get('/usuario', function(req, res, next) {
  });
 
 /* GET página formulariousuario. */
-router.get('/doacoes/formulariousuario', function(req, res, next) {
+router.get('/formulariousuario', function(req, res, next) {
   res.render('formulariousuario', { title: 'vida Sustentável' });
  });
 
 /* GET página formularioong. */
-router.get('/doacoes/formularioong', function(req, res, next) {
+router.get('/formularioong', function(req, res, next) {
   res.render('formularioong', { title: 'vida Sustentável' });
  });
 
 /* GET página criar. */
-router.get('/usuario/criar', function(req, res, next) {
+router.get('/criar', function(req, res, next) {
   res.render('criar', { title: 'vida Sustentável' });
  });
 
 /* GET página post1. */
-router.get('/blog/post1', function(req, res, next) {
+router.get('/post1', function(req, res, next) {
   res.render('post1', { title: 'vida Sustentável' });
  });
 
 /* GET página senha. */
-router.get('/usuario/senha', function(req, res, next) {
+router.get('/senha', function(req, res, next) {
   res.render('senha', { title: 'vida Sustentável' });
  });
 
