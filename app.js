@@ -31,17 +31,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/blog', blogRouter);
-app.use('/doacoes', doacoesRouter);
-app.use('/sobre', sobreRouter);
-app.use('/contato', contatoRouter);
-app.use('/usuario', usuarioRouter);
-app.use('/formulariousuario', formulariousuarioRouter);
-app.use('/formularioong', formularioongRouter);
-app.use('/criar', criarRouter);
-app.use('/post1', post1Router);
-app.use('/senha', senhaRouter);
-app.use('/users', usersRouter);
+// app.use('/blog', blogRouter);
+// app.use('/doacoes', doacoesRouter);
+// app.use('/sobre', sobreRouter);
+// app.use('/contato', contatoRouter);
+// app.use('/usuario', usuarioRouter);
+// app.use('/formulariousuario', formulariousuarioRouter);
+// app.use('/formularioong', formularioongRouter);
+// app.use('/criar', criarRouter);
+// app.use('/post1', post1Router);
+// app.use('/senha', senhaRouter);
+// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
