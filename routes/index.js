@@ -72,12 +72,12 @@ router.get('/formularioong', function (req, res, next) {
 
 router.post('/formularioong', upload.single("capa"), async function (req, res, next) {
   try {
-    const { nome, mensagem } = req.body;
+    const { nome, documento, telefone, endereco, cep, cidade, email, mensagem } = req.body;
     const capa = req.file.filename;
 
 
-    const sql = "INSERT INTO ong ( nome, capa, mensagem) VALUES (?, ?, ?);";
-    const values = [nome, capa, mensagem];
+    const sql = "INSERT INTO ong ( nome, documento, telefone, endereco, cep, cidade, email, capa, mensagem) VALUES (?, ?, ?);";
+    const values = [nome, documento, telefone, endereco, cep, cidade, email, capa, mensagem];
     const [rows] = await pool.query(sql, values);
 
     const { insertId } = rows;
