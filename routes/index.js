@@ -46,19 +46,19 @@ router.get('/usuario', function (req, res, next) {
 
 /* GET página formulariousuario. */
 router.get('/formulariousuario', function (req, res, next) {
-  res.render('formulariousuario', { title: 'vida Sustentável' });
+  res.render('formulariousuario', { title: 'vida Sustentável', sucess: false });
 });
 
 router.post('/formulariousuario', async function (req, res, next) {
   try {
-    const { nome, telefone, email, documento, valor, formaPagamento } = req.body;
+    const { nome, telefone, email, documento, valor, formaPagamento, ongDesejada } = req.body;
 
-    const sql = "INSERT INTO usuario ( nome, telefone, email, documento, valor, formaPagamento) VALUES (?,?,?,?,?,?);";
-    const values = [nome, telefone, email, documento, valor, formaPagamento];
+    const sql = "INSERT INTO usuario ( nome, telefone, email, documento, valor, formaPagamento, ongDesejada) VALUES (?,?,?,?,?,?, ?);";
+    const values = [nome, telefone, email, documento, valor, formaPagamento, ongDesejada];
     const [rows] = await pool.query(sql, values);
 
     const { insertId } = rows;
-    res.redirect(`/`);
+    res.render(`formulariousuario.ejs`, {sucess: true});
   } catch (err) {
     console.error(err);
     next(new Error("Ocorreu um erro ao cadastrar o produto."));
@@ -76,7 +76,7 @@ router.post('/formularioong', upload.single("capa"), async function (req, res, n
     const capa = req.file.filename;
 
 
-    const sql = "INSERT INTO ong ( nome, documento, telefone, endereco, cep, cidade, email, capa, mensagem) VALUES (?, ?, ?);";
+    const sql = "INSERT INTO ong ( nome, documento, telefone, endereco, cep, cidade, email, capa, mensagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
     const values = [nome, documento, telefone, endereco, cep, cidade, email, capa, mensagem];
     const [rows] = await pool.query(sql, values);
 

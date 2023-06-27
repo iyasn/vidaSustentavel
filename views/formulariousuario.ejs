@@ -92,6 +92,9 @@
           </style>
         </head>
         <body>
+          <% if(sucess){ %>
+            <h2>Cadastro realizado com sucesso!</h2>
+         <% } %>
           <div class="formulario">
             <img class="logoformulario" src="images/logoB-.png" alt="Logo">
         
@@ -119,6 +122,18 @@
               <div class="form-group">
                 <label for="valor">Valor a ser pago:</label>
                 <input type="text" id="valor" name="valor" required>
+              </div>
+
+              <div class="form-group">
+                <label for="ongDesejada">Para qual ONG deseja doar?</label>
+                <select id="ongDesejada" name="ongDesejada" required>
+                  <option value="CanteirosColetivos">Canteiros Coletivos</option>
+                  <option value="CostaBrasilis">Costa Brasilis</option>
+                  <option value="Sustentarte">Sustentarte</option>
+                  <option value="InstitutoSocioambiental">Instituto Socioambiental (ISA)</option>
+                  <option value="WWFBrasil">WWF-Brasil</option>
+                  <option value="InstitutoTerra">Instituto Terra</option>
+                </select>
               </div>
         
               <div class="form-group">
