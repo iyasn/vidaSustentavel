@@ -67,7 +67,7 @@ router.post('/formulariousuario', async function (req, res, next) {
 
 /* GET página formularioong. */
 router.get('/formularioong', function (req, res, next) {
-  res.render('formularioong', { title: 'vida Sustentável' });
+  res.render('formularioong', { title: 'vida Sustentável', sucess: false });
 });
 
 router.post('/formularioong', upload.single("capa"), async function (req, res, next) {
@@ -81,7 +81,7 @@ router.post('/formularioong', upload.single("capa"), async function (req, res, n
     const [rows] = await pool.query(sql, values);
 
     const { insertId } = rows;
-    res.redirect(`/`);
+    res.render(`formularioong.ejs`, {sucess: true});
   } catch (err) {
     console.error(err);
     next(new Error("Ocorreu um erro ao cadastrar o produto."));

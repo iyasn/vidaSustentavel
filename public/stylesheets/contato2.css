@@ -60,6 +60,7 @@ nav.menu-desktop a:hover{
     margin-top: 4%;
 }
 
+
 /*
 Footer
 */
@@ -155,6 +156,16 @@ contato
   }
   */
   
+  .sucess {
+      margin-top: 4%;
+      text-align: center;
+      background-color: #8bc98b;
+              color: white;
+              padding: 10px 150px;
+              border: none;
+              border-radius: 3px;
+              height: 50px;
+  }
   
   .form {
     width: 100%;
