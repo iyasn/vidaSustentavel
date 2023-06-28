@@ -15,7 +15,7 @@
 }
 
 header{
-    padding: 8px 113px;
+    padding: 10px 113px;
 }
 
 .logo{
@@ -28,7 +28,7 @@ nav.menu-desktop {
 
 nav.menu-desktop ul{
     position: relative;
-    top: 25px; 
+    top: 15px; 
 }
 
 nav.menu-desktop li{

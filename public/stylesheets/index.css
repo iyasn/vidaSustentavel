@@ -65,10 +65,11 @@ segundo menu
 
 .menu-blog {
     text-align: center;
-    height: 50px;
+    height: 58px;
     width: 100%;
     background-color: #8bc98b;
     position: relative;
+    margin-top: -8px;
 }
 
 .menu-blog li{

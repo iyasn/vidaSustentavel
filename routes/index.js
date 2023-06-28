@@ -98,6 +98,56 @@ router.get('/post1', function (req, res, next) {
   res.render('post1', { title: 'vida Sustentável' });
 });
 
+/* GET página post2. */
+router.get('/post2', function (req, res, next) {
+  res.render('post2', { title: 'vida Sustentável' });
+});
+
+/* GET página post3. */
+router.get('/post3', function (req, res, next) {
+  res.render('post3', { title: 'vida Sustentável' });
+});
+
+/* GET página post4. */
+router.get('/post4', function (req, res, next) {
+  res.render('post4', { title: 'vida Sustentável' });
+});
+
+/* GET página post5. */
+router.get('/post5', function (req, res, next) {
+  res.render('post5', { title: 'vida Sustentável' });
+});
+
+/* GET página post6. */
+router.get('/post6', function (req, res, next) {
+  res.render('post6', { title: 'vida Sustentável' });
+});
+
+/* GET página post7. */
+router.get('/post7', function (req, res, next) {
+  res.render('post7', { title: 'vida Sustentável' });
+});
+
+/* GET página post8. */
+router.get('/post8', function (req, res, next) {
+  res.render('post8', { title: 'vida Sustentável' });
+});
+
+/* GET página post9. */
+router.get('/post9', function (req, res, next) {
+  res.render('post9', { title: 'vida Sustentável' });
+});
+
+/* GET página post10. */
+router.get('/post10', function (req, res, next) {
+  res.render('post10', { title: 'vida Sustentável' });
+});
+
+/* GET página post11. */
+router.get('/post11', function (req, res, next) {
+  res.render('post11', { title: 'vida Sustentável' });
+});
+
 /* GET página senha. */
 router.get('/senha', function (req, res, next) {
   res.render('senha', { title: 'vida Sustentável' });
