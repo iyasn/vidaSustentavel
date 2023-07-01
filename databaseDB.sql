@@ -34,6 +34,16 @@ mensagem TEXT
 select *
 From ong;
 
+CREATE TABLE contato ( 
+id INT PRIMARY KEY auto_increment NOT NULL,
+nome VARCHAR(50) NOT NULL, 
+email VARCHAR(255) NOT NULL,
+mensagem TEXT
+);
+
+select *
+From contato;
+
 INSERT INTO ong
 VALUES ('1', 'Canteiros Coletivos', '02.287.348/0001-22', '3883-4543', 'R. Marujos do Brasil, 02', '40040-485', 'Tororo, Salvador - BA', 'contato@canteiroscoletivos.com.br', 'ong11.jpg', 'É uma iniciativa cidadã, autônoma e apartidária de recuperação de praças e canteiros abandonados da cidade de Salvador.');
 

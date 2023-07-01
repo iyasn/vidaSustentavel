@@ -36,7 +36,24 @@ router.get('/sobre', function (req, res, next) {
 
 /* GET página contato. */
 router.get('/contato', function (req, res, next) {
-  res.render('contato', { title: 'Vida Sustentável' });
+  res.render('contato', { title: 'vida Sustentável', sucess: false });
+});
+
+router.post('/contato', async function (req, res, next) {
+  try {
+    const { nome, email, mensagem } = req.body;
+
+
+    const sql = "INSERT INTO contato ( nome, email, mensagem) VALUES (?, ?, ?);";
+    const values = [nome, email, mensagem];
+    const [rows] = await pool.query(sql, values);
+
+    const { insertId } = rows;
+    res.render(`contato.ejs`, {sucess: true});
+  } catch (err) {
+    console.error(err);
+    next(new Error("Ocorreu um erro ao enviar seu contato."));
+  }
 });
 
 /* GET página blog. */
