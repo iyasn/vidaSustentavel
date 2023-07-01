@@ -53,7 +53,7 @@ router.post('/formulariousuario', async function (req, res, next) {
   try {
     const { nome, telefone, email, documento, valor, formaPagamento, ongDesejada } = req.body;
 
-    const sql = "INSERT INTO usuario ( nome, telefone, email, documento, valor, formaPagamento, ongDesejada) VALUES (?,?,?,?,?,?, ?);";
+    const sql = "INSERT INTO usuario ( nome, telefone, email, documento, valor, formaPagamento, ongDesejada) VALUES (?,?,?,?,?,?,?);";
     const values = [nome, telefone, email, documento, valor, formaPagamento, ongDesejada];
     const [rows] = await pool.query(sql, values);
 
@@ -61,7 +61,7 @@ router.post('/formulariousuario', async function (req, res, next) {
     res.render(`formulariousuario.ejs`, {sucess: true});
   } catch (err) {
     console.error(err);
-    next(new Error("Ocorreu um erro ao cadastrar o produto."));
+    next(new Error("Ocorreu um erro ao realizar a doação."));
   }
 });
 
@@ -84,7 +84,7 @@ router.post('/formularioong', upload.single("capa"), async function (req, res, n
     res.render(`formularioong.ejs`, {sucess: true});
   } catch (err) {
     console.error(err);
-    next(new Error("Ocorreu um erro ao cadastrar o produto."));
+    next(new Error("Ocorreu um erro ao cadastrar a ong."));
   }
 });
 

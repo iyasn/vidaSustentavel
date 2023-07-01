@@ -11,7 +11,8 @@ telefone VARCHAR(20) NOT NULL,
 email VARCHAR(255) NOT NULL, 
 documento VARCHAR(14) NOT NULL, 
 valor DECIMAL(8,2) NOT NULL, 
-formaPagamento ENUM ("pix", "boleto", "cartao") NOT NULL
+formaPagamento ENUM ("pix", "boleto", "cartao") NOT NULL,
+ongDesejada ENUM ("CanteirosColetivos", "CostaBrasilis", "Sustentarte", "InstitutoSocioambiental", "WWFBrasil", "InstitutoTerra") NOT NULL
 );
 
 select *
